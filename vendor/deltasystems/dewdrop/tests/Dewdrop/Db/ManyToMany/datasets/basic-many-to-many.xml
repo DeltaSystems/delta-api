@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="dewdrop_test_fruits">
+        <column>name</column>
+        <column>is_delicious</column>
+        <column>level_of_deliciousness</column>
+        <row>
+            <value>Apple</value>
+            <value>1</value>
+            <value>6</value>
+        </row>
+        <row>
+            <value>Banana</value>
+            <value>1</value>
+            <value>7</value>
+        </row>
+    </table>
+    <table name="dewdrop_test_animals">
+        <column>name</column>
+        <column>is_fierce</column>
+        <column>is_cute</column>
+        <row>
+            <value>Gorilla</value>
+            <value>1</value>
+            <value>1</value>
+        </row>
+    </table>
+    <table name="dewdrop_test_fruits_eaten_by_animals">
+        <column>animal_id</column>
+        <column>fruit_id</column>
+        <row>
+            <value>1</value>
+            <value>1</value>
+        </row>
+    </table>
+</dataset>

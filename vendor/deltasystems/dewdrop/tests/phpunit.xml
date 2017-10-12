@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+    bootstrap="./bootstrap.php"
+    backupGlobals="false"
+    colors="true">
+    <testsuites>
+        <testsuite name="Dewdrop Library Test Suite">
+            <directory suffix="Test.php">./</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../Dewdrop</directory>
+            <exclude>
+                <file>Zend</file>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

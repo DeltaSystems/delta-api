@@ -1,0 +1,21 @@
+{
+    "autoload": {
+        "psr-4": {
+            "DeltaApi\\": "library/DeltaApi",
+            "Model\\": "models"
+        }
+    },
+    "require": {
+        "deltasystems/dewdrop": "1.*",
+        "guzzlehttp/guzzle": "~6.0",
+        "paragonie/random_compat": "1.*",
+        "silex/silex": "^1.3",
+        "zendframework/zend-mail": "2.*"
+    },
+    "require-dev" : {
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/dbunit": "2.*",
+        "phpunit/phpunit": "4.*",
+        "phpunit/phpunit-mock-objects": "2.*"
+    }
+}

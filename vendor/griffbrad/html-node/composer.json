@@ -1,0 +1,15 @@
+{
+  "name": "griffbrad/html-node",
+  "autoload": {
+    "psr-4": {
+      "HtmlNode\\": "HtmlNode/"
+    }
+  },
+  "require": {
+    "zendframework/zend-dom": "~2.4.0",
+    "zendframework/zend-escaper": "~2.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.*"
+  }
+}

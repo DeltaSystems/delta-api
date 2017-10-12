@@ -1,0 +1,19 @@
+<?php
+
+// Don't render the layout
+$this->component->setShouldRenderLayout(false);
+
+$fields = $this->component->getFields()->getVisibleFields($this->filters);
+
+/* @var \Dewdrop\Fields\Listing $listing */
+$listing = $this->component->getListing();
+
+$listing->removeSelectModifierByName('selectpaginate');
+
+/* @var \Dewdrop\View\Helper\CsvExport $csvExportHelper */
+$csvExportHelper = $this->csvExport();
+
+$csvExportHelper->sendHeaders("{$this->component->getTitle()} Export.csv");
+
+$csvExportHelper->renderWithGenerator($fields, $listing, $this->csvCellRenderer());
+

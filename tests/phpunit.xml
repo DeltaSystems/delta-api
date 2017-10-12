@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+        bootstrap="./bootstrap.php"
+        backupGlobals="false"
+        colors="true">
+    <testsuites>
+        <testsuite name="Delta API Test Suite">
+            <directory suffix="Test.php">./</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../library/DeltaApi</directory>
+            <directory suffix=".php">../models</directory>
+            <exclude>
+                <directory suffix=".php">../models/metadata</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

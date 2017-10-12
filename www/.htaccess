@@ -1,0 +1,30 @@
+RewriteEngine On
+
+php_flag   display_errors       Off
+
+# @todo Change this to a 301 re-direct after we get no issues with redirect loops
+# Require SSL on everything using port 80
+RewriteCond %{SERVER_PORT} ^80$
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=302]
+
+# Strip cache-busting prefixes from URLs
+RewriteRule ^cache-[\dA-Z.\-_]+/(.+) $1 [L,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+php_value post_max_size 10G
+php_value upload_max_filesize 10G
+php_value max_input_time 3600
+#remove this if the one in the media component works properly
+php_value memory_limit 10G
+
+ExpiresActive On
+ExpiresByType text/html "access plus 1 seconds"
+ExpiresByType image/gif "access plus 10 years"
+ExpiresByType image/jpeg "access plus 10 years"
+ExpiresByType image/png "access plus 10 years"
+ExpiresByType text/css "access plus 10 years"
+ExpiresByType text/javascript "access plus 10 years"
+ExpiresByType application/javascript "access plus 10 years"
+ExpiresByType application/x-javascript "access plus 10 years"

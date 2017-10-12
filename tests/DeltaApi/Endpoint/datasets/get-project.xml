@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<dataset>
+    <users user_id="20" email_address="bgriffith@deltasys.com" password_hash="xxx" api_key="valid-api-key" />
+    <projects created_by_user_id="20" name="Test Project" api_key="project-api-key" />
+</dataset>

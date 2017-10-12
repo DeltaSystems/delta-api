@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dataset>
+    <sign_up_requests />
+    <authorized_email_domains authorized_email_domain_id="1" domain_name="deltasys.com" />
+</dataset>

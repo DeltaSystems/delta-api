@@ -1,0 +1,14 @@
+language: php
+php:
+  - '7.0'
+install:
+  - composer install
+before_script:
+  - psql -c "create user delta_cli_test with password 'delta_cli_test';" -U postgres
+  - psql -c 'create database delta_cli_test owner delta_cli_test;' -U postgres
+  - ./vendor/bin/dewdrop dbdeploy
+script:
+  - mkdir -p build/logs
+  - phpunit -c tests/phpunit.xml --coverage-clover build/logs/phpunit-clover.xml tests
+after_script:
+  - php vendor/bin/coveralls -v
