@@ -4,11 +4,12 @@
 
 $project
     ->setName('Delta API')
-    ->addSlackHandle('@bgriffith')
+    ->addSlackHandle('@ceili')
     ->addSlackHandle('@darby');
 
 $project->createEnvironment('production')
     ->setUsername('deploy')
+    ->setSshPrivateKey(__DIR__ . '/ssh-keys/id_rsa')
     ->addHost('zeta.tripointhosting.com');
 
 $project->getScript('deploy')
