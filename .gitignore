@@ -1,4 +1,4 @@
 .idea
 .delta-cli-cache.json
 ssh-keys
-
+vendor/*
