@@ -8,9 +8,9 @@ $project
     ->addSlackHandle('@darby');
 
 $project->createEnvironment('production')
-    ->setUsername('deploy')
+    ->setUsername('deltasys_deploy')
     ->setSshPrivateKey(__DIR__ . '/ssh-keys/id_rsa')
-    ->addHost('zeta.tripointhosting.com');
+    ->addHost('web1.alpha.clusters.3pth.com');
 
 $project->getScript('deploy')
     ->addStep($project->rsync('.', 'zend/')->delete()->exclude('www')->exclude('logs'))
