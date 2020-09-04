@@ -2,3 +2,4 @@
 .delta-cli-cache.json
 ssh-keys
 vendor/*
+models/metadata/*
