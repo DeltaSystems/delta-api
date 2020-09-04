@@ -38,7 +38,7 @@ class AuthorizedEmailDomainsTest extends DbTestCase
         $message = $this->model->getInvalidAddressErrorMessage();
 
         $this->assertContains('deltasys.com', $message);
-        $this->assertContains('voltagekc.com', $message);
+        $this->assertContains('ventamarketing.com', $message);
     }
 
     public function testCanGetIdForDomainOfValidEmailAddress()
